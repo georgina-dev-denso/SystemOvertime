@@ -218,30 +218,21 @@
                     <label1 id="costo-label"><strong></strong> </label1>
                   </div>
 
-                   <!-- Contenedor para mes y botón -->
+                  <label><strong>Seleccione fechas para guardar proyección: </strong></label>
                   <div class="input_box_guardar">
-                      <label><strong>Mes:</strong></label>
-                      <div class="select-button-container">
-                          <select id="mes-select" name="mes">
-                          <option value="enero">Enero</option>
-                            <option value="febrero">Febrero</option>
-                            <option value="marzo">Marzo</option>
-                            <option value="abril">Abril</option>  
-                            <option value="mayo">Mayo</option>
-                            <option value="junio">Junio</option>
-                            <option value="julio">Julio</option>
-                            <option value="agosto">Agosto</option>
-                            <option value="septiembre">Septiembre</option>
-                            <option value="octubre">Octubre</option>
-                            <option value="noviembre">Noviembre</option>
-                            <option value="diciembre">Diciembre</option>
-                              <!-- Agrega más meses aquí -->
-                          </select>
-                          <button class="button" type="button" id="guardar-btn">Guardar</button>
+                      <label><strong>Fecha de inicio:</strong></label>
+                      <input type="date" id="fecha-inicio" name="fecha_inicio" required />
 
-                      </div>
-                  </div>                
-                 </div>       
+                      <label><strong>Fecha de fin:</strong></label>
+                      <input type="date" id="fecha-fin" name="fecha_fin" required /> 
+                  </div>
+
+                  <button class="button" type="submit" id="guardar-btn" style="width: 200px; height: 50px; font-size: 18px;">Guardar</button>
+
+
+                 
+                                  
+                    
         </div>
       </div>
     </div>
