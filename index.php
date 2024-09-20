@@ -250,19 +250,7 @@
 
   
   
-    <!-- ======= Visualizar Section ======= -->
-    <section id="Visualizar" class="section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h3 class="section-title">Identificación de Tiempo Extra (Visualización por mes).</h3>
-          <span class="section-divider"></span>
-          <p class="section-description">.</p>
-        </div>               
-          
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
+ 
 
     <?php include('footer.php'); ?>
 

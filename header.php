@@ -52,7 +52,7 @@
             </li> 
             <li><a class="nav-link scrollto active" href="index.php">Inicio</a></li>  
             <li><a href="annualplan.php">Dashboard</a></li>
-            <li><a class="nav-link scrollto active" href="#Visualizar">Visualizaciones</a></li>
+            <li><a href="visualizaciones.php">Proyecciones</a></li>
         </ul>
       </div>
 
