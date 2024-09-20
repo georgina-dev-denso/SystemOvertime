@@ -1,0 +1,1195 @@
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #fff;
+  color: #666666;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: #042d79;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #042d79;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+ text-align: center;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  margin: 0 0 20px 0;
+  padding: 0;
+ text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  background: #042d79;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+  right: 15px;
+  bottom: 0;
+  transition: none;
+  visibility: hidden;
+  opacity: 0;
+  width: 64px;
+  height: 34px;
+}
+
+.back-to-top i {
+  line-height: 0;
+  font-size: 20px;
+}
+
+.back-to-top:focus {
+  background: linear-gradient(45deg, #042d79, #1f0000);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #042d79;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Estilos para el header */
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Estilos para el header */
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: linear-gradient(45deg, #042d79, #1f0000);
+  transition: all 0.5s;
+}
+
+/* Para centrar el contenido dentro del header */
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilos para la parte izquierda del header */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para la parte derecha del header */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Alinear los items del menú */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Empuja estos elementos hacia la izquierda */
+  gap: 20px;
+}
+
+/* Estilos para el logo */
+#logo h1 a {
+  font-size: 25px;
+  padding: 0 15px;
+  text-align: center; /* Centra el texto del logo */
+  display: inline-block;
+  color: white;
+}
+
+/* Asegura que el logo se mantenga centrado */
+#logo {
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilo de los items de la lista */
+#navbar ul li {
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 20px;
+}
+
+/* Estilos para los enlaces */
+#navbar ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  transition: 0.3s;
+  letter-spacing: 0.4px;
+}
+
+/* Efectos al pasar el cursor sobre los enlaces */
+#navbar ul li a:hover {
+  color: #fff;
+}
+
+/* Estilos para la info del usuario */
+.user-info a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  transition: 0.3s;
+  letter-spacing: 0.1px;
+}
+
+/* Espaciado entre los elementos */
+.header-left li, .header-right li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+
+}
+
+
+
+/**
+* Mobile Navigation 
+*/
+
+
+
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #ffffff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile>ul>li {
+  padding: 0;
+  
+}
+
+.navbar-mobile a:hover:before,
+.navbar-mobile li:hover>a:before,
+.navbar-mobile .active:before {
+  visibility: hidden;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #333333;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #ffffff;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(255, 254, 254, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #ffffff;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #042d79, #000000), url("../img/hero-bg.jpg") center top no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1025px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-height: 640px) {
+  #hero {
+    height: 120vh;
+  }
+}
+
+#hero .hero-text {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  right: 0;
+  height: calc(50% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#hero h2 {
+  margin: 30px 0 10px 0;
+  padding: 0 15px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#hero p {
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #hero p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+#hero .btn-get-started {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  color: #042d79;
+  background: #fff;
+}
+
+#hero .product-screens {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+
+
+
+#hero .product-screens .product-screen-1 {
+  position: center;
+  z-index: 20;
+  left: calc(50% - 154px);
+  bottom: 0;
+  top: 100px;
+}
+
+
+
+@media (max-width: 800px) {
+  #hero .product-screens .product-screen-1 {
+    position: static;
+    padding-top: 30px;
+  }
+
+  #hero .product-screens .product-screen-2,
+  #hero .product-screens .product-screen-3 {
+    display: none;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #fff;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+#footer .credits {
+  font-size: 13px;
+  color: #888;
+}
+
+#footer .footer-links a {
+  color: #666;
+  padding-left: 15px;
+}
+
+#footer .footer-links a:first-child {
+  padding-left: 0;
+}
+
+#footer .footer-links a:hover {
+  color: #042d79;
+}
+
+
+
+
+/* Our Team Section
+--------------------------------*/
+#Visualizar {
+  padding: 60px 0;
+  overflow: hidden;
+  background-color: #eef6ff; /* Cambia este color por el que desees */
+}
+
+#Visualizar .member {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#Visualizar .member .pic {
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 260px;
+}
+
+#Visualizar .member .pic img {
+  max-width: 100%;
+}
+
+#Visualizar .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+#Visualizar .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+}
+
+#Visualizar .member .social {
+  margin-top: 15px;
+}
+
+#Visualizar.member .social a {
+  color: #a5b6c2;
+}
+
+#Visualizar .member .social a:hover {
+  color: #1dc8cd;
+}
+
+#Visualizar .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+
+/*ESTILO DEL MENU PARA PANTALLA CHICA */ 
+svg {
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+}
+svg path {
+  fill: #fff;
+}
+ol {
+  list-style-type: none;
+}
+a[href] {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+a[href]:hover:after {
+  transform: scaleX(1);
+}
+
+a[href]:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  height: 4px;
+  background: #fff;
+  left: 0;
+  right: 0;
+  transition: transform 0.15s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.menu {
+  position: relative;
+  width: 250px;
+  z-index: 1001; /* Asegurar que esté por encima del contenido */
+}
+.menu__content {
+  color: #fff;
+  margin: 0;
+  padding: 0 0 25px 0;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 300px;
+  z-index: 2;
+}
+.menu__toggle-label {
+  height: 44px;
+  left: 0;
+  position: absolute;
+  width: 44px;
+}
+.menu__toggle-label svg {
+  left: 0;
+  position: absolute;
+  top: -50%;
+  transition: transform 0.15s;
+  z-index: 2;
+  display: none; /* Oculta el icono de menú en pantallas grandes */
+}
+.menu__toggle-label svg:nth-of-type(2) {
+  left: 250px;
+  transform: scale(0);
+}
+.menu__toggle {
+  opacity: 1;
+  
+}
+.menu__toggle:checked ~ .menu__toggle-label {
+  background: rgba(0,0,0,0.65);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: background 0.15s;
+  width: 100vw;
+}
+.menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(1) {
+  transform: scale(0);
+}
+.menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(2) {
+  left: 250px;
+  transform: scale(1);
+  transition: transform 0.15s;
+  transition-delay: 0.925s;
+}
+.menu__toggle:checked ~ .menu__content {
+  transform: translate(100%, 0);
+}
+.menu__toggle:checked ~ .menu__content .menu-item {
+  transform: translateX(0);
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.15s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) {
+  border-color: #042d79;
+ 
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) a[href]:after {
+  background: #042d79;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) {
+  border-color: #4e6a9c;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) a[href]:after {
+  background: #4e6a9c;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) {
+  border-color: #042d79;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) a[href]:after {
+  background: #042d79;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) {
+  border-color: #042d79;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) a[href]:after {
+  background: #042d79;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) {
+  border-color: #042d79;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) a[href]:after {
+  background: #042d79;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) {
+  transition-delay: 0.225s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) {
+  transition-delay: 0.275s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) {
+  transition-delay: 0.325s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(1) {
+  transition-delay: 0.375s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(2) {
+  transition-delay: 0.425s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(3) {
+  transition-delay: 0.475s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) {
+  transition-delay: 0.525s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(1) {
+  transition-delay: 0.575s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(2) {
+  transition-delay: 0.625s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) .menu-item:nth-of-type(3) {
+  transition-delay: 0.675s, 0.875s;
+}
+.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) {
+  transition-delay: 0.725s, 0.875s;
+}
+.menu__content > .menu-item {
+  border-left: 8px solid transparent;
+}
+.menu__content > .menu-item > a {
+  line-height: 44px;
+  min-width: 60px;
+}
+.sub-menu {
+  padding: 0 0 0 44px;
+}
+.menu-item {
+  line-height: 44px;
+  min-height: 44px;
+  padding: 0 12px;
+  transform: translateX(-100%);
+}
+.menu-item .menu-item {
+  transform: translateX(-150%);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+/* Estilos para pantallas pequeñas utilizando un media query */
+@media (max-width: 900px) {
+  .menu__toggle-label svg {
+    display: block; /* Muestra el icono de menú solo en pantallas pequeñas */
+  }
+ 
+}
+
+/*Aqui inicia lo editado*/
+
+/* Estilos del formulario */
+#about .col-lg-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about .form_container {
+  background-color: #f0f2f5;
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  width: 100%;
+  max-width: 700px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .form_container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+#about .form_container h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1f0000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+#about .form_container h3 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  color: #042d79;
+}
+
+#about .form_container label {
+  font-size: 18px;
+  color: #181818;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+#about .form_container label1 {
+  font-size: 16px;
+  color: #242424;
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+#about .form_container input[type="text"],
+#about .form_container input[type="password"],
+#about .form_container select {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#about .form_container input[type="text"]:focus,
+#about .form_container input[type="password"]:focus,
+#about .form_container select:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 8px rgba(66, 139, 202, 0.5);
+}
+
+#about .form_container .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #042d79;
+}
+
+#about .form_container .button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #080e41;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .form_container .button:hover {
+  background-color: #d90429;
+  box-shadow: 0px 5px 15px rgba(217, 4, 41, 0.4);
+}
+
+/* Cambiar la apariencia del select */
+#about .form_container select {
+  color: #666;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+
+#about .form_container select:focus {
+  border-color: #1f0000;
+  color: #000;
+}
+
+/* Icono dentro de los campos */
+#about .form_container .input_box label i {
+  color: #042d79;
+}
+
+/* Mejorar la apariencia de los títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+/* Estilos para el contenedor del label, select y botón */
+#about .input_box_guardar {
+  margin-top: 180px; /* Ajusta el espacio superior del contenedor según sea necesario */
+}
+
+/* Estilos para alinear el campo desplegable y el botón */
+#about .select-button-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el botón y el campo desplegable */
+}
+
+#about .select-button-container select {
+  margin-right: 10px; /* Espacio entre el campo desplegable y el botón */
+  padding: 10px; /* Ajusta el padding del select si es necesario */
+  vertical-align: middle; /* Alinea verticalmente el select */
+}
+
+#about .select-button-container button {
+  padding: 10px 20px; /* Ajusta el padding del botón según tu diseño */
+  background-color: #080e41; /* Cambia el color de fondo del botón si lo deseas */
+  color: white; /* Cambia el color del texto del botón si lo deseas */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 5px; /* Opcional: agrega bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  line-height: normal; /* Ajusta el line-height para que coincida con el select */
+  margin-top: 0; /* Asegúrate de que no haya margen superior que desalineé el botón */
+  vertical-align: middle; /* Alinea verticalmente el botón */
+}
+
+#about .select-button-container button:hover {
+  background-color: #036911; /* Cambia el color del botón al pasar el mouse */
+}
+
+
+
+
+
+
+
+
+/*Aqui finaliza lo editado*/
+
+
+
+
+
+
+/*ESTILOS PARA LA TABLA EN CAPTURAR*/
+
+#capturar form table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#capturar form table td {
+  padding: 8px;
+  text-align: center;
+ 
+}
+/* Columna 1 */
+#capturar .form_container_mostrar table td:nth-child(1) {
+  /* Estilos para la primera columna */
+  width: 50px; /* Ancho deseado para la primera columna */
+ vertical-align: middle; /* Centrar verticalmente el contenido */
+}
+/* Columna 2 */
+#capturar .form_container_mostrar table td:nth-child(2) {
+  /* Estilos para la segunda columna */
+  width: 100px;
+  vertical-align: middle; /* Centrar verticalmente el contenido */
+}
+/* Columna 3*/
+#capturar .form_container_mostrar table td:nth-child(3) {
+  /* Estilos para la primera columna */
+  width: 50px; /* Ancho deseado para la primera columna */
+  vertical-align: middle; /* Centrar verticalmente el contenido */
+}
+/* Columna 4 */
+#capturar .form_container_mostrar table td:nth-child(4) {
+  /* Estilos para la segunda columna */
+  width: 70px;
+  vertical-align: middle; /* Centrar verticalmente el contenido */
+}
+#capturar .form_container_mostrar table td:nth-child(5) {
+  /* Estilos para la quinta columna */
+  width: 150px;
+  vertical-align: middle; /* Centrar verticalmente el contenido */
+}
+
+/* Estilos para las columnas 6 a 17 */
+#capturar .form_container_mostrar table td:nth-child(n+6):nth-child(-n+17) {
+  width: 40px; /* Ancho deseado para las celdas de las columnas 6 a 17 */
+  vertical-align: middle; /* Centrar verticalmente el contenido */
+}
+
+#capturar .form_container_mostrar table td:nth-child(18) {
+  /* Estilos para la décimo octava columna */
+  width: 250px; /* Ancho deseado para la décimo octava columna */
+  vertical-align: middle; /* Centrar verticalmente el contenido */
+}
+
+/* Columna 19 */
+#capturar .form_container_mostrar table td:nth-child(19) {
+  /* Estilos para la décimo novena columna */
+  width: 150px; /* Ancho deseado para la décimo novena columna */
+  vertical-align: middle; /* Centrar verticalmente el contenido */
+}
+
+/* Estilos para el contenedor del mensaje */
+#messages {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100001;
+  width: 100%; /* Añadido para ocupar todo el ancho */
+  text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para cada tipo de mensaje */
+.message {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  max-width: 400px;
+  text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.message.success {
+  border-left: 6px solid #28a745; /* Color verde para mensajes de éxito */
+}
+
+.message.error {
+  border-left: 6px solid #dc3545; /* Color rojo para mensajes de error */
+}
+
+/* Estilos para el icono del mensaje */
+.message i {
+  margin-right: 10px;
+  font-size: 24px;
+  vertical-align: middle; /* Alinear verticalmente con el texto */
+}
+
+/* Estilos para el texto del mensaje */
+.message span {
+  display: inline-block; /* Cambiar a bloque para que el texto ocupe toda la anchura disponible */
+  vertical-align: middle; /* Alinear verticalmente con el icono */
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  margin-left: 10px; /* Espacio entre el icono y el texto */
+  word-wrap: break-word; /* Romper palabras largas */
+  overflow-wrap: break-word; /* Para navegadores más antiguos */
+  max-width: 100%; /* Ajustar el ancho máximo al contenedor */
+}
+
+/* Estilos para el botón de cerrar */
+.close-button {
+  background-color: gray;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px; /* Agregar bordes redondeados al botón */
+  float: right;
+  vertical-align: middle; /* Alinear verticalmente con el icono */
+  line-height: 30px;
+}
+
+.close-button:hover {
+  color: #ffffff;
+}
+
+
+
+/* Estilos para el menú */
+.menu-item a {
+  text-decoration: none;
+  color: #fff; /* Cambia el color del texto según sea necesario */
+}
+
+
+#matriz .row {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos */
+}
+#matriz .form_container {
+  left: 100%; /* Colocar el formulario a la mitad del contenedor padre */
+  top: 50%;
+  transform: translate(-50%, -50%); /* Centrar el formulario horizontal y verticalmente */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Ancho del formulario */
+  max-width: 600px; /* Ancho máximo del formulario */
+}
+
+/* Contact Section
+--------------------------------*/
+#contact {
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+#contact .contact-about h3 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #042d79;
+}
+
+#contact .contact-about p {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+}
+
+#contact .social-links {
+  padding-bottom: 20px;
+}
+
+#contact .social-links a {
+  font-size: 18px;
+  background: #fff;
+  color: #042d79;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  border: 1px solid #042d79;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .social-links a i {
+  line-height: 0;
+}
+
+#contact .social-links a:hover {
+  background: #042d79;
+  color: #fff;
+}
+
+#contact .info {
+  color: #333333;
+}
+
+#contact .info i {
+  font-size: 32px;
+  color: #042d79;
+  float: left;
+  line-height: 0;
+}
+
+#contact .info p {
+  padding: 0 0 10px 42px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+#contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #063ef5;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #042d79;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+#contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #042d79;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+#contact .php-email-form input,
+#contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+#contact .php-email-form input::focus,
+#contact .php-email-form textarea::focus {
+  background-color: #042d79;
+}
+
+#contact .php-email-form button[type=submit] {
+  background: #042d79;
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 30px;
+  color: #eee;
+}
+
+#contact .php-email-form button[type=submit]:hover {
+  cursor: pointer;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
