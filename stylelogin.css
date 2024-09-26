@@ -68,6 +68,7 @@ a {
   width: 100%;
   background: linear-gradient(45deg, #042d79, #1f0000);
   background-position: center;
+  
 }
 .home::before {
   content: "";
